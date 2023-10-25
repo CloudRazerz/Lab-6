@@ -14,3 +14,37 @@ def encode(password):
     return str(result)
 
 
+def decode(word):
+    result = ""
+    print(len(word))
+    for i in range(0, len(word)):
+        num = int(word[i])
+        num += 10
+        num -= 3
+        if num >= 10:
+            num -= 10
+            result = result + str(num)
+        else:
+            result = result + str(num)
+    return result
+
+
+if __name__ == "__main__":
+    running = True
+    password = int
+    while running:
+        print("""Menu
+-------------
+1. Encode
+2. Decode
+3. Quit
+              """)
+        choice = int(input("Please enter an option: "))
+        if choice == 1:
+            password = encode(input("Please enter your password to encode: "))
+            print("Your password has been encoded and stored!\n")
+        if choice == 2:
+            print(f"The encoded password is {password}, and the original password is {decode(password)}.")
+        if choice == 3:
+            running = False
+            break
