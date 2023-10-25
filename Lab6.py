@@ -27,7 +27,7 @@ if __name__ == "__main__":
         choice = int(input("Please enter an option: "))
         if choice == 1:
             password = encode(input("Please enter your password to encode: "))
-            print("Your password has been encoded and stored!")
+            print("Your password has been encoded and stored!\n")
         if choice == 2:
             print(f"The encoded password is {password}, and the original password is {decode(password)}.")
         if choice == 3:
