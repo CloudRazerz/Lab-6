@@ -10,7 +10,7 @@ Version Change
 def encode(password):
     result = ""
     for digit in password:
-        result += str(int(digit) + 3)
+        result += str(int(digit) + 3)[-1]
     return str(result)
 
 
@@ -31,7 +31,7 @@ def decode(word):
 
 if __name__ == "__main__":
     running = True
-    password = int
+    password = ""
     while running:
         print("""Menu
 -------------
