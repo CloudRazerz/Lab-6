@@ -6,17 +6,16 @@ Section 12309
 Version Change
 '''
 
-
+#Yi
 def encode(password):
     result = ""
     for digit in password:
         result += str(int(digit) + 3)[-1]
     return str(result)
 
-
+#Will
 def decode(word):
     result = ""
-    print(len(word))
     for i in range(0, len(word)):
         num = int(word[i])
         num += 10
@@ -28,7 +27,7 @@ def decode(word):
             result = result + str(num)
     return result
 
-
+#Menu
 if __name__ == "__main__":
     running = True
     password = ""
